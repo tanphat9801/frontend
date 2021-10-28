@@ -13,9 +13,12 @@
 
         a[i].style.background = 'red';
 
+        
+
         if ( (i+1) % 2 == 0){
             a[i].style.background = 'yellow';
         }
+        
     }
 
  

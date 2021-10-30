@@ -1,0 +1,80 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.box1{
+    width: 10%;
+    height: 10%;
+    background: green;
+    line-height: 60px;
+    text-align: center;
+    position: fixed;
+    left: 0%;
+}
+.box2{
+    width: 10%;
+    height: 10%;
+    background: green;
+    line-height: 60px;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.box3{
+    width: 10%;
+    height: 10%;
+    background: green;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    position: fixed;
+    right: 0%;
+}
+.boxcenter{
+    width: 10%;
+    height: 10%;
+    background: green;
+    line-height: 60px;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform:translateX(-50%);
+}
+.boxa{
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    background-color: pink;
+    top: 0px;
+    left: 0px;
+    transform: translate(-100%,-100%);
+}
+.boxb{
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    background-color: pink;
+    top: 0px;
+    right: 0px;
+    transform: translate(100%,-100%);
+}
+.boxc{
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    background-color: pink;
+    bottom: 0px;
+    left: 0px;
+    transform: translate(-100%,100%);
+}
+.boxd{
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    background-color: pink;
+    right: 0px;
+    bottom: 0px;
+    transform: translate(100%,100%);
+}

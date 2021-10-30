@@ -1,0 +1,8 @@
+h3{
+    display: flex;
+    justify-content: center;
+    padding: 10px 40px;
+    background-color: rgb(162, 162, 253);
+    font-size: 20px;
+}
+

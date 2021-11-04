@@ -1,0 +1,1 @@
+document.getElementsByClassName('header').innerHTML = Math.floor(Math.random() * 4);

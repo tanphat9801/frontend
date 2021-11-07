@@ -75,19 +75,19 @@
 				<form action="" method="POST" class="form-inline"  >
 					<div class="form-group">
 						<label class="sr-only" for="">label</label>
-						<input type="text" class="form-control" placeholder="Task Name" ref="task_name" />
+						<input type="text" id="add-name" class="form-control" placeholder="Task Name" ref="task_name" />
 					</div>
 					<div class="form-group">
 						<label class="sr-only" for="">label</label>
 						<select name="ds" id="inputDs" class="form-control" required="required" ref="task_level">
-							<opti value="0" >Small</option>
-							<option value="1">Medium</option>
-							<option value="2">High</option>
+							<option value="Low" >Low</option>
+							<option value="Medium">Medium</option>
+							<option value="High">High</option>
 						</select>
 					</div>
 
-					<button type="button" class="btn btn-primary">Submit</button>
-					<button type="button" class="btn btn-default">Cancel</button>
+					<button type="button" onclick="submitForm()" class="btn btn-primary">Submit</button>
+					<button id="cancel" type="button" class="btn btn-default">Cancel</button>
 				</form>
 			</div>
 		</div>
@@ -108,15 +108,6 @@
 				</thead>
 
 				<tbody id="list-task">
-					<!-- <tr>
-						<td class="text-center">1</td>
-						<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ea c</td>
-						<td class="text-center"><span class="label label-danger">High</span></td>
-						<td>
-							<button type="button" class="btn btn-warning">Edit</button>
-							<button type="button" class="btn btn-danger">Delete</button>
-						</td>
-					</tr> -->
 				</tbody>
 
 			</table>
@@ -136,9 +127,9 @@
 	<script src="js/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
-
-
 	<script src="js/define.js"></script>
+	<script src="js/lib.js"></script>
+	<script src="js/event.js"></script>
 	<script src="js/model.js"></script>
 	<script src="js/view.js"></script>
 	<script src="js/main.js"></script>

@@ -3,5 +3,5 @@ submitForm = () => {
        let level =  selectLevel.val(); 
 
        addData(name,level);
-       showData(JSON.parse(localStorage.getItem('model')))
+      //  showData(JSON.parse(localStorage.getItem('model')))
     }

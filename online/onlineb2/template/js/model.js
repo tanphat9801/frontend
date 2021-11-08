@@ -11,13 +11,15 @@ addData = (name,level) => {
    if(arrayData == undefined){
      arrayData = [];
    }else{
-      return arrayData;
+     arrayData =  arrayData;
    }
 
-   let newArrayData = {id : id , name : name , level : level};
+   let newData = {id : id , name : name , level : level};
 
-   arrayData.push(newArrayData);
+   let arrNew = JSON.parse(arrayData);
 
-   localStorage.setItem('model', JSON.stringify(arrayData));
+   arrNew.push(arrNew)
+
+   localStorage.setItem('model', JSON.stringify(arrNew));
 
 }

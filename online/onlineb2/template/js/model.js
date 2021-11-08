@@ -9,7 +9,7 @@ addData = (name,level) => {
    let arrayData = localStorage.getItem('model');
 
    if(arrayData == undefined){
-     arrayData = arr;
+     arrayData = [];
    }else{
       return arrayData;
    }

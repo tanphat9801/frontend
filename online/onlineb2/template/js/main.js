@@ -1,1 +1,2 @@
-showData(data);
+let items = listItems()
+showData(items)

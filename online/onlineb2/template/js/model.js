@@ -1,25 +1,27 @@
-// tao du lieu ao 
-// xu li du lieu 
-let data = []
+loadStorage = () => {
+  return JSON.parse(localStorage.getItem('model'))
+}
 
-addData = (name,level) => {
+saveStorage = (items) => {
+ localStorage.setItem('model', JSON.stringify(items));
+}
 
-   let id = makeid(15);
+listItems = () => {
+  let items = loadStorage()
+  if(items === null) items = [];
+  return items 
+}
 
-   let arrayData = localStorage.getItem('model');
+addData = (name, level) => {
+  let id = makeid(15);
 
-   if(arrayData == undefined){
-     arrayData = [];
-   }else{
-     arrayData =  arrayData;
-   }
+  let arrayData = listItems()
 
-   let newData = {id : id , name : name , level : level};
+  let newData = {id: id, name: name, level: level};
 
-   let arrNew = JSON.parse(arrayData);
+  arrayData.push(newData)
 
-   arrNew.push(arrNew)
-
-   localStorage.setItem('model', JSON.stringify(arrNew));
-
+  saveStorage(arrayData)
+  
+  return arrayData
 }

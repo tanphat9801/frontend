@@ -12,6 +12,18 @@ listItems = () => {
   return items 
 }
 
+functionEdit = (id) =>{
+  let itemList = listItems();
+  let editItems = itemList.find(item => item.id === id)
+  console.log(editItems);
+}
+
+functionDelete = () =>{
+  
+}
+
+
+
 addData = (name, level) => {
   let id = makeid(15);
 

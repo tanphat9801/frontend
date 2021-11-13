@@ -22,12 +22,11 @@ showData = (items) => {
         let buttonType = colorLever(item.level)
         xhtlm       +=       `<tr>
                                     <td class="text-center">${index + 1}</td>
-                                    <td>${item.id}</td>
                                     <td>${item.name}</td>
                                     <td class="text-center"><span class="label label-${buttonType}">${item.level}</span></td>
                                     <td>
-                                        <button type="button" onclick= "functionEdit('${item.id}')" class="btn btn-warning">Edit</button>
-                                        <button type="button" class="btn btn-danger">Delete</button>
+                                        <button type="button" onclick = "showItemsEdit('${item.id}')" class="btn btn-warning">Edit</button>
+                                        <button type="button" onclick = "deleteItems('${item.id}')"   class="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>`;
                                

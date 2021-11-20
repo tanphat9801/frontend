@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+   <div class="container">
+    <nav id="menu">
+
+        <div id="zoom">
+            <button onclick="changeFontSize('increase')"><i class="fas fa-search-plus"></i></button>
+            <button onclick="changeFontSize('decrease')"><i class="fas fa-search-minus"></i></button>
+        </div>
+
+        <div id="seclect">
+
+          <h3>Định dạng chữ:</h3>
+
+          <select id="zoneSelect" onclick="changeOption();">
+            <option value="zone1">Giữa</option>
+            <option value="zone2">Trái</option>
+            <option value="zone3">Phải</option>
+          </select>
+
+        </div>
+
+        <div id="space">
+
+            <h3>Khoảng cách:</h3>
+  
+            <select id="letspace" onclick="changeLetter();">
+              <option value="val1">0.5</option>
+              <option value="val2">1</option>
+              <option value="val3">1.5</option>
+            </select>
+  
+          </div>
+
+        <div id="changeColor">
+
+            <h3>chọn màu:</h3>
+            <button onclick="changeBg('#17c0eb')" style="background-color: #17c0eb;"></button>
+            <button onclick="changeBg('#ff9f1a')" style="background-color: #ff9f1a;"></button>
+            <button onclick="changeBg('#27ae60')" style="background-color: #27ae60;"></button>
+            <button onclick="changeBg('#B33771')" style="background-color: #B33771;"></button>
+            <button onclick="changeBg('#8e44ad')" style="background-color: #8e44ad;"></button>
+
+        </div>
+
+        <div class="fas fa-moon" id="theme-btn"></div>
+
+
+
+    </nav>
+
+
+
+
+    <section id="content">
+        <p id="p1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime aut voluptate esse alias earum, laborum, harum porro, perspiciatis consectetur distinctio nihil? Inventore qui sit molestiae autem labore possimus numquam facilis ipsum. Nemo commodi natus numquam distinctio hic a temporibus voluptatem corrupti vero laborum obcaecati illo, animi ipsa expedita quidem! Nostrum earum dolore obcaecati possimus tenetur tempore neque, voluptatibus illum nihil laudantium ullam, pariatur blanditiis fugit in sint dolores? Excepturi consectetur reprehenderit quia architecto debitis facere quasi ad eligendi adipisci temporibus. Nesciunt officia laborum at suscipit magni distinctio velit voluptas perspiciatis consequatur quas explicabo, corporis sapiente? Voluptatem officia nostrum aspernatur praesentium?</p>
+        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laudantium voluptatem incidunt libero eos ut deserunt, labore modi adipisci perferendis consectetur ipsam alias cupiditate nostrum saepe quas dolore. Perferendis consequuntur quas tenetur, in optio quam. Delectus neque at in, pariatur quisquam iure voluptas ut amet, tenetur fugiat enim minima! Nisi eaque veniam unde repudiandae nihil, totam quo ab porro adipisci dicta voluptas officia ullam qui vero delectus iusto! Obcaecati ex iste possimus asperiores nostrum. Accusantium, a. Sequi nihil numquam deleniti, cumque iste ea minima soluta facere, consequuntur dolor, voluptatem ex! Autem, explicabo cupiditate recusandae saepe voluptate sunt odio tenetur ex ab eos, consequuntur corporis incidunt. Quo quia saepe quisquam corporis maxime id quaerat molestiae vero soluta consectetur, reiciendis minus perferendis. Corporis beatae fuga, doloribus minus ipsum harum alias quo rem eius tempore quos reiciendis commodi molestiae unde voluptas repellendus recusandae quam ut. Esse nemo omnis voluptas atque vero, voluptates dolorum. Ab odit asperiores earum sit temporibus obcaecati impedit eveniet soluta, porro delectus et dolor consectetur nisi tempore quo atque possimus excepturi necessitatibus dolore iure non. Eius iusto necessitatibus velit quos error, illo adipisci labore architecto aliquam sunt illum laborum nam recusandae. Unde esse voluptates accusantium porro consequatur minus suscipit voluptas.</p>
+    </section>
+
+   </div>
+
+    <script src="./js/zoom.js"></script>
+
+</body>
+</html>

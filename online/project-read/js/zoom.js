@@ -32,7 +32,7 @@ function changeOption(){
         document.getElementById("content").style.textAlign = "center";
     }else if(zone.value == "zone2"){
         document.getElementById("content").style.textAlign = "left";
-    }else{
+    }else if(zone.value == "zone3"){
         document.getElementById("content").style.textAlign = "right";
     }
 
@@ -48,7 +48,7 @@ function changeLetter(){
         document.getElementById("content").style.letterSpacing = '0.5px'
     }else if(letter.value == "val2"){
         document.getElementById("content").style.letterSpacing = '1px'
-    }else{
+    }else if(letter.value == "val3"){
         document.getElementById("content").style.letterSpacing = '1.5px'
     }
 

@@ -3,22 +3,22 @@ $(document).ready(function () {
 });
 
 loadData = () =>{
- 
+
     $.ajax({
-        url: "https://zendvn-api.herokuapp.com/api/v1/price/gold",
         type: "GET",
-        success: function (response) {
-            // console.log(response);
-            var str = '';
-            $.each(response, function (i, item) { 
-                  console.log(item)
-                str += "<tr>";
-                str += "<td>" + item.buy  + "</td>";
-                str += "<td>" + item.sell  + "</td>";
-                str += "<td>" + item.type  + "</td>";
-                str += "</tr>";
+        dataType: "json",
+        url: "https://zendvn-api.herokuapp.com/api/v1/price/gold",
+        success: function (res) {
+            var str = "";
+            res.data.forEach(item => {
+                str += `<tr>
+                            <th>${item.type}</th>
+                            <th>${item.buy}</th>
+                            <th>${item.sell}</th>
+                            
+                        </tr>`;
             });
-            $('#load_data').html(str);
+            $('#load_data').append(str);
         }
     });
 

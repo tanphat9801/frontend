@@ -1,3 +1,6 @@
+const urls = "https://zendvn-api.herokuapp.com/api/v1/price/gold";
+
+
 $(document).ready(function () {
     loadData();
 });
@@ -7,7 +10,7 @@ loadData = () =>{
     $.ajax({
         type: "GET",
         dataType: "json",
-        url: "https://zendvn-api.herokuapp.com/api/v1/price/gold",
+        url: urls,
         success: function (res) {
             var str = "";
             res.data.forEach(item => {

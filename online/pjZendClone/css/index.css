@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f2f6;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    padding:.5rem ;
+    border-radius: .5rem;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.btn{
+    font-size: 1.6rem;
+    padding: 1rem 1.5rem;
+    background-color: white;
+    color: black;
+    border-radius: .5rem;
+    margin-top: 1rem;
+}
+
+.btn:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: .3s all;
+}
+
+
+
+.container{
+    width: 1320px;
+    max-width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+#setinterval{
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;left: 0;bottom: 0;right: 0;
+    text-align: center;
+    line-height: 40px;
+    background-color: white;
+    border-bottom: 1px solid rgb(245, 233, 233);
+    z-index: 1000;
+}
+
+#setinterval span{
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+#menu{
+    margin-top: 40px;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+#menu .menu-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu .menu-box a{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #80DEEA;
+    text-transform: capitalize;
+}
+
+#menu .menu-box .menu-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu .menu-box .menu-items a{
+    font-size: 1.5rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    background-color: #80DEEA;
+    color: white;
+    font-weight: 400;
+    margin: .5rem;
+}
+
+#menu .menu-box .menu-items a:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    transition: .3s all;
+}
+
+
+#carouselExampleIndicators{
+    width: 1300px;
+    height: 20rem;
+    border-radius: 2.5rem;
+    margin: 0 auto;
+    margin-top: 14rem;
+    position: relative;
+}
+
+#carouselExampleIndicators .carousel-inner{
+    border-radius: 2.5rem;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#carouselExampleIndicators .carousel-inner #color1{
+    background-color: #FFD600;
+    width: 100%;
+    height: 100%;
+}
+
+#carouselExampleIndicators .carousel-inner #color2{
+    background-color: #FF3D00;
+    width: 100%;
+    height: 100%;
+}
+
+#carouselExampleIndicators .carousel-inner #color3{
+    background-color: #80DEEA;
+    width: 100%;
+    height: 100%;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item .container2{
+    width: 1000px;
+    height: 12rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item .container2 .car-element{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item .container2 .car-element .car-text{
+    color: white;
+    text-transform: capitalize;
+}
+#carouselExampleIndicators .carousel-inner .carousel-item .container2 .car-element .car-text h1{
+    padding-bottom: .5rem;
+    font-weight: 600;
+}
+#carouselExampleIndicators .carousel-inner .carousel-item .container2 .car-element .car-text h3{
+    padding-bottom: 1rem;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item .container2 .car-element .car-icon{
+    color: white;
+    font-size: 8rem;
+}
+
+#learn{
+    padding-top: 5rem;
+}
+
+#learn h4{
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+    text-transform: capitalize;
+}
+
+#learn .learn-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    gap: 1.5rem;
+}
+
+#learn .learn-box .box-element{
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-transform: capitalize;
+    color: white;
+    background-color: white;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+.learn-content h1{
+    font-size: 2.5rem;
+    color: black;
+}
+
+#learn .learn-box .box-element .content-images img{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+

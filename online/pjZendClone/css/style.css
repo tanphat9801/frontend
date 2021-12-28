@@ -34,6 +34,34 @@ a{
     padding: 0 2.5vw;
 }
 
+
+#categories{
+    width: 100%;
+    height: 60px;
+    margin-top: 60px;
+}
+
+.container-box {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-box button{
+    padding: 1rem 1.5rem;
+    background-color: black;
+    color: white;
+    margin: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+
+
 .logo{
     font-size: 2.5rem;
     color:#48dbfb;
@@ -156,6 +184,7 @@ a{
 /* video */
 
 #container{
+ padding-top: 2rem;   
  width: 1500px;
  min-height: 500px;
  margin: 0 auto;
@@ -195,10 +224,44 @@ aside h4{
 }
 
 iframe{
-    position: fixed;
-    z-index: 1000;
+    position: fixed; 
+    z-index: 1000; 
 }
 
 mark{
     background-color: rgb(240, 240, 57);
+}
+
+
+label{
+    font-size: 1.5rem;
+}
+
+
+select{
+    width: 160px;
+    height: 40px;
+    background-color: rgb(245, 245, 245);
+    font-size: 1.5rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+select:hover{
+    box-shadow: 0 .5rem .5rem rgba(0,0,0,.1);
+    transition: .3s all;
+}
+
+.select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select h1{
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
 }

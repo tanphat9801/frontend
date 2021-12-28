@@ -1,26 +1,51 @@
 $(document).ready(function () {
 
     var key = 'AIzaSyDTr18kbwOaBOkSG5PZatBkYK1Wbn1L1yw';
-    var playlistId = 'PLv6GftO355AvAl13CUVcVvWu0hOZnpfW8';
+    var playlistId = [
+        'PLv6GftO355AtasIvXXJNXIs_H6v9KSUXC',
+        'PLv6GftO355AsWv1PaUHRAAf1NB0usIhVD',
+        'PLv6GftO355Au9RuClBKMEDNlxsh8IzDTI',
+        'PLv6GftO355AuLqfA6_EGjitcDQ5lg5leq',
+        'PLv6GftO355AvAl13CUVcVvWu0hOZnpfW8',
+        'PLv6GftO355Aud_UdoZNp9IVeoUkQp-1Uw',
+        'PLv6GftO355AsQtYp_YrsqEihOCiNlZkCb',
+        'PLv6GftO355AsVd5ESbQhIMpP74y-tsduc',
+        'PLv6GftO355AtDjStqeyXvhA1oRLuhvJWf',
+        'PLv6GftO355Au593vQVXUMCdCFWwQQz4ga',
+        'PLv6GftO355Au7i_xN_0OsVZUO54rp9tR6'
+      ];
     var URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
-
+    var sel = document.getElementById('sel_status').selectedIndex;
+    var i = sel;
     var options = {
         part: 'snippet',
         key: key,
-        maxResults: 40,
-        playlistId: playlistId
+        maxResults: 50,
+        playlistId: playlistId[i]
     }
+    
+    loadVids( options );
 
-    loadVids();
+    $('main').on('click', 'aside', function () {
+        var id = $(this).attr('data-key');
+       mainVid(id);
+    });
 
-    function loadVids() {
+    function loadVids ( options ) {
         $.getJSON(URL, options, function (data) {
             var id = data.items[0].snippet.resourceId.videoId;
             mainVid(id);
             resultsLoop(data);
         });
     }
+
+    $('#sel_status').change(function() {
+        var playlistIndex = $(this).prop('selectedIndex');
+        options.playlistId = playlistId[playlistIndex];
+        $('main').html('');
+        loadVids( options );
+    });
 
     function mainVid(id) {
         $('#video').html(`
@@ -35,7 +60,7 @@ $(document).ready(function () {
 
             var thumb = item.snippet.thumbnails.medium.url;
             var title = item.snippet.title;
-            var desc = item.snippet.description.substring(0, 100);
+            var desc = item.snippet.description.substring(0, 80);
             var vid = item.snippet.resourceId.videoId;
 
 
@@ -53,32 +78,41 @@ $(document).ready(function () {
         });
     }
 
-		// CLICK EVENT
-    $('main').on('click', 'aside', function () {
-        var id = $(this).attr('data-key');
-        mainVid(id);
-    });
-
-
 });
 
 
+$('button').click(function (e) { 
+    e.preventDefault();
+    let str = '';
+    let search = $('#search').val();
+    let source = $('main').html();
+    // console.log(search)
+    let data = source.split('<aside>')
+    data.forEach(item => {
+        let show  = item.indexOf(search) !== -1
+        if(show){
+        str +=  item.replace(new RegExp(search, 'ig') ,`<mark>${search}</mark>`);
+        console.log(2)
+        }else{
+            str += '';
+            console.log(3)
+        }
+
+    });
+    $('main').html(str);
+
+
+});
+// find text in html 
+
+ 
 
 
 
 
-//highlighttext
-const text = document.getElementById('idtext');
-const resetText = text.innerHTML;
-const input = document.getElementById('search');
-const button = document.getElementById('button');
 
-highlightText = () =>{
-    if(input.value){
-        const word     = input.value.trim();
-        const regexp   = new RegExp(word, 'g')
-        text.innerHTML = resetText.replace(regexp, `<mark>${word}</mark>`)
-    }
-}
+// chuyên sang chuoi 
+// chạy vong lặp
+// sau đó chuyển cái array mới sang một chuỗi rồi đưa vào html 
 
-button.addEventListener('click', highlightText())
+
